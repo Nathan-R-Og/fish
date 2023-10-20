@@ -2,17 +2,19 @@
 
 [ext_resource path="res://rod.png" type="Texture" id=1]
 [ext_resource path="res://fimsh.gd" type="Script" id=2]
-[ext_resource path="res://fish.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Water_Body.tscn" type="PackedScene" id=3]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )
 
-[node name="RigidBody2D" parent="." instance=ExtResource( 3 )]
-position = Vector2( 401.141, 356.241 )
-xLimits = Vector2( 91.691, 811.498 )
-yLimits = Vector2( 302.424, 492.466 )
-timings = Vector2( 1, 10 )
-normalSpeedNerf = 2.5
+[node name="Water_Body" parent="." instance=ExtResource( 3 )]
+position = Vector2( 63.7547, 305.147 )
+z_index = 1
+d = 0.05
+spread = 0.5
+distance_between_springs = 10
+spring_number = 80
+depth = 200
 
 [node name="Rod" type="Node2D" parent="."]
 position = Vector2( 871.289, 220.368 )
